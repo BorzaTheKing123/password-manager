@@ -5,7 +5,6 @@ namespace App\Features;
 use App\Domains\GeneratePhrasePasswordJob;
 use App\Domains\CheckDomainJob;
 use App\Domains\CreateNewJob;
-use App\Domains\StoreNewValueJob;
 
 class GeneratePasswordFeature
 {
@@ -21,7 +20,7 @@ class GeneratePasswordFeature
             return (new GeneratePhrasePasswordJob($this->value, $this->salt, $this->num))->handle();
         }
 
-        if((new StoreNewValueJob($this->value, $this->salt))->handle() == false)
+        if((new CreateNewJob($this->value, $this->salt))->handle() == false)
         {
             return 'Invalid input!';
         }

@@ -4,7 +4,7 @@ namespace App\Domains;
 
 use App\Data\Models\Domain;
 
-class CreateNewJob
+class StoreNewValueJob
 {   
     public function __construct(private $value, private $salt)
     {
