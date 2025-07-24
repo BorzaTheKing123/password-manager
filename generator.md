@@ -1,4 +1,4 @@
-# Generiranje gesel z sloneskimi frazami
+# Generiranje gesel z slovenskimi frazami
 
 ## Datoteke
 
